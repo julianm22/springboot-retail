@@ -1,0 +1,35 @@
+@charset "ISO-8859-1";
+
+body {
+		background-image:url('../images/store.jpg');
+		width:100%;
+		height:auto;
+		background-size:cover;
+		opacity:.9;
+	}
+
+.card {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   box-sizing: border-box;
+   margin: 0 30px;
+   margin-bottom: 70px;
+   background-color: rgb(239, 235, 228);
+   width: 100px;
+   min-width: 300px;
+   height: 400px;
+   font-weight: bold;
+   color: black;
+   text-align: center;
+   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+   transition: all 0.25s ease;
+ }
+ 
+ #card-container {
+ 	display:flex;
+ 	align-items:center;
+ 	justify-content:center;
+ 	padding-top:120px;
+ }
