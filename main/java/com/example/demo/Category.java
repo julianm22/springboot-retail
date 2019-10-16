@@ -3,14 +3,19 @@ package com.example.demo;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
 @Entity
 @Table(name="categories")
 public class Category implements Comparable<Category>{
-	@GeneratedValue
+	
 	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+//	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "CAT_SEQ")
+//	@SequenceGenerator(sequenceName = "category_seq", allocationSize = 1, name = "CAT_SEQ")
 	@Column(name="category_id", length=10)
 	private int categoryId;
 	@Column(name="category_name", length=30)

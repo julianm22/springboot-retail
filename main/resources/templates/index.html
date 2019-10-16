@@ -41,11 +41,15 @@
 	
 	.jumbotron {
 		background-color:#71677C;
-		color:rgba(0,0,0,0.9);
+		color:white;
+		<!-- color:rgba(0,0,0,0.9); -->
 		font-weight:bold;
 	}
 	small {
 		font-style:italic;
+	}
+	#adminlink {
+		color:white;
 	}
 </style>
 </head>
@@ -54,7 +58,14 @@
 		Welcome to Happy Retail <small>Experience the difference ;)</small>
 	</h1>
 	<div class="button">
-		<a href="loginPage" class="btn btn-primary">Enter Site</a>
+		<table>
+			<tr>
+				<td><a href="user" class="btn btn-primary">Sign in</a></td>
+			</tr>
+			<tr>
+				<td><a href="admin" id="adminlink">Log in as admin</a></td>
+			</tr>
+		</table>
 	</div>
 </body>
 </html>

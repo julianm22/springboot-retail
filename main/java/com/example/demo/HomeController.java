@@ -147,5 +147,17 @@ public class HomeController {
         model.addAttribute("products", products);
         return "removeProduct";
     }
+    
+    /******************** User Product**********************/
+    
+    @GetMapping("/userProductPage")
+    public String userProductPage(ModelMap model) {
+    	List<Product> products = ps.getProducts();
+    	products.forEach(p -> p.setCategoryName(cs.getCategoryById(p.getCategoryId()).getCategoryName()));
+        model.addAttribute("products", products);
+        return "userProducts";
+    }
+    
+  
 
 }
