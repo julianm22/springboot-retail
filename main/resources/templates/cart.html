@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>User Home</title>
+<title>User Cart</title>
 <link rel="stylesheet"
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
 	integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
@@ -46,34 +46,12 @@
 	<div class="topnav">
   <a class="active" href="user">Home</a>
   <a href="userProductPage">Products</a>
-  <a href="cartPage">Cart</a>
+  <a href="#"></a>
   <a href="#"></a>
 </div>
-<div class="container-fluid">
-				<!-- create a Table to display all Contacts -->
-				<table class="table table-striped">
-					<thead>
-						<tr>
-							<th scope="col">Id</th>
-							<th scope="col">Name</th>
-							<th scope="col">Price</th>
-							<th scope="col">Description</th>
-							<th scope="col">Category</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr th:each="p : ${products}">
-							<td th:text="${p.productId}">No data</td>
-							<td th:text="${p.productName}">No data</td>
-							<td th:text="${p.productPrice}">No data</td>
-							<td th:text="${p.description}">No data</td>
-							<td th:text="${p.categoryName}">No data</td>
-							<td><input type="button" value="Add to cart"></td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
- 
+
+
+
 
 </body>
 </html>

@@ -158,6 +158,15 @@ public class HomeController {
         return "userProducts";
     }
     
+    
+    @GetMapping("/cartPage")
+    public String cartPage(ModelMap model) {
+    	List<Product> products = ps.getProducts();
+    	products.forEach(p -> p.setCategoryName(cs.getCategoryById(p.getCategoryId()).getCategoryName()));
+        model.addAttribute("products", products);
+        return "cart";
+    }
+    
   
 
 }
